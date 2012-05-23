@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>MPW Player Example</title>
+<script src="includes/swfobject.js" type="text/javascript"></script>
+</head>
+
+<body>
+<h3>Video Player</h3>
+
+<div id="flvplayer"><img src="trusted.jpg"></div>
+<script type="text/javascript">
+	var so = new SWFObject("mpw_player.swf", "swfplayer", "400", "327", "9", "#000000"); // Player loading
+	so.addVariable("flv", "TrustedComputing_LAFKON_LOW.flv"); // File Name
+	so.addVariable("jpg","trusted.jpg"); // Preview photo
+	so.addVariable("autoplay","false"); // Autoplay, make true to autoplay
+	so.addParam("allowFullScreen","true"); // Allow fullscreen, disable with false
+	so.addVariable("backcolor","000000"); // Background color of controls in html color code
+	so.addVariable("frontcolor","ffffff"); // Foreground color of controls in html color code
+	so.write("flvplayer"); // This needs to be the name of the div id
+</script>
+
+
+<h3>Audio Player</h3>
+
+<div id="mp3player"></div>
+<script type="text/javascript">
+	var so = new SWFObject("mpw_player.swf", "swfplayer", "400", "27", "9", "#FFFFFF");
+	so.addVariable("mp3", "audio.mp3");
+	//so.addVariable("autoplay","true");
+	so.addVariable("effect","false");
+	so.addVariable("backcolor","b54645");
+	so.addVariable("frontcolor","ffffff");
+	so.addVariable("fullscreen","false");
+	so.addParam("allowFullScreen","true");
+	so.write("mp3player");
+</script>
+
+</body>
+</html>
